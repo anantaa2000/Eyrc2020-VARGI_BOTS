@@ -1,0 +1,34 @@
+<launch>
+	<!-- Launch Task-3 Simulation Environment in Gazebo -->
+	<include file="$(find pkg_vb_sim)/launch/task3_simulation.launch" />
+
+	<!-- Launch Moveit move_group Node -->
+	<include file = "$(find pkg_moveit_ur5_1)/launch/move_group.launch" /> 
+    <!-- Run RViz with Moveit! Plugin -->
+    <arg name="use_rviz" default="true" />
+
+    <include file="$(find pkg_moveit_ur5_1)/launch/moveit_rviz.launch" if="$(arg use_rviz)">
+        <arg name="rviz_config" value="$(find pkg_moveit_ur5_1)/launch/moveit.rviz"/>
+    </include>
+
+    <!-- Add bins, conveyor to Moveit! Planning Scene in RViz -->
+    <arg name="scene_file" default="$(find pkg_task3)/config/rviz/scene_file.scene"/> 
+    <node name = "moveit_publish_scene_from_text" pkg= "moveit_ros_planning" type = "moveit_publish_scene_from_text" args= "$(arg scene_file)"/> 
+
+    
+    
+
+    <!-- Recording Bag File for Submission -->
+    <arg name="record" default="false"/>
+    <arg name="rec_name" default="t3.bag"/>
+
+    <group if="$(arg record)">
+        <node name="rosbag_record_pick" pkg="rosbag" type="record"
+         args="record -O $(find pkg_task3)/bag_files/$(arg rec_name) --chunksize=10 /eyrc/vb/ur5_1/vacuum_gripper/logical_camera/ur5_1" output="screen"/>
+   </group>
+
+   <!-- Run Task-3 Pick Place ROS Node  -->
+    <node name= "node_t3" pkg= "pkg_task3" type="node_t3.py" output="screen"/> 
+
+
+</launch>
