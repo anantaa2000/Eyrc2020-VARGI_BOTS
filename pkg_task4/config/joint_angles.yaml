@@ -1,0 +1,37 @@
+
+joints:
+  red_bin : [math.radians(69), math.radians(-41), math.radians(80), math.radians(-131), math.radians(-91), math.radians(-1)]
+
+  yellow_bin : [math.radians(-3), math.radians(-41), math.radians(80), math.radians(-131), math.radians(-91), math.radians(-1)]
+
+  green_bin : [math.radians(-93),math.radians(-41),math.radians(80),math.radians(-131),math.radians(-91),math.radians(-1)]
+
+  home_pose : [math.radians(172.158644502),math.radians(-40.0489379456),math.radians(58.2512942738),math.radians(-108.158242078),math.radians(-90.0037747571),math.radians(-7.86462864917)]
+    
+  packagen_00 : [math.radians(163),math.radians(-110),math.radians(-3),math.radians(-78),math.radians(13),math.radians(105)]
+
+  packagen_01 : [math.radians(126),math.radians(-90),math.radians(-27),math.radians(-68),math.radians(50),math.radians(97)]
+
+  packagen_02 : [math.radians(57),math.radians(-109),math.radians(-7),math.radians(-67),math.radians(119),math.radians(94)]
+
+  packagen_10 : [math.radians(-52),math.radians(-22),math.radians(-75),math.radians(-83),math.radians(-128),math.radians(90)]
+
+  packagen_11 : [math.radians(123),math.radians(-65),math.radians(-91),math.radians(-24),math.radians(57),math.radians(90)]
+
+  packagen_12 : [math.radians(56),math.radians(-83),math.radians(-79),math.radians(-19),math.radians(124),math.radians(90)]
+
+  packagen_20 : [math.radians(-56),math.radians(-99),math.radians(91),math.radians(8),math.radians(124),math.radians(-90)]
+
+  packagen_21 : [math.radians(-118),math.radians(-118),math.radians(104),math.radians(15),math.radians(60),math.radians(-90)]
+
+  packagen_22 : [math.radians(-160),math.radians(-98),math.radians(90),math.radians(8),math.radians(19),math.radians(-90)]
+
+  packagen_30 : [math.radians(-51),math.radians(-90),math.radians(119),math.radians(-28),math.radians(127),math.radians(-90)]
+
+  packagen_31 : [math.radians(-118),math.radians(-116),math.radians(137),math.radians(-22),math.radians(61),math.radians(-90)]
+
+  packagen_32 : [math.radians(-160),math.radians(-92),math.radians(121),math.radians(-28),math.radians(19),math.radians(-90)]
+
+  package_drop : [math.radians(173),math.radians(-42),math.radians(56),math.radians(-104),math.radians(-90),math.radians(-7)]
+
+  straightUp : [math.radians(180),math.radians(-90),math.radians(0),math.radians(-180),math.radians(-90),math.radians(0)]
