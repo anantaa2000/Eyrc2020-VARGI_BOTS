@@ -5,12 +5,14 @@ config_iot:
     server_url: "broker.mqttdashboard.com"        # http://www.hivemq.com/demos/websocket-client/
     # server_url: "test.mosquitto.org"        # Alternative to HiveMQ
     server_port: 1883
-    topic_sub: "eyrc/JaiMataD/iot_to_ros"          # <unique_id> = JaiMataD
+    topic_sub: "/eyrc/vb/JaiMataD/orders"          # <unique_id> = JaiMataD
     topic_pub: "eyrc/JaiMataD/ros_to_iot"          # <unique_id> = JaiMataD
     qos: 0
 
     sub_cb_ros_topic: "/ros_iot_bridge/mqtt/sub"   # ROS nodes can listen to this topic to receive data from MQTT
   
   google_apps:
-    spread_sheet_id: "Sheet1"
-    spread_sheet_name: "Sheet1"
+    spread_sheet_id: AKfycbxQ8X4Lu1aTrL4uoiuZ1WNIB91gNss29FE7IZhiV3U-AQjPlWI
+    
+    submission_spread_sheet_id: url2 = "https://script.google.com/macros/s/AKfycbw5xylppoda-8HPjt2Tzq4ShU_Xef-Ik-hEtBPcPk0gdGw8095j4RZ7/exec"
+    
