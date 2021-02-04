@@ -12,7 +12,7 @@ from pkg_ros_iot_bridge.msg import msgRosIotGoal        # Message Class that is 
 from pkg_ros_iot_bridge.msg import msgRosIotResult      # Message Class that is used for Result Messages
 from pkg_ros_iot_bridge.msg import msgRosIotFeedback    # Message Class that is used for Feedback Messages
 
-from pkg_iot_ros_bridge.msg import msgMqttSub           # Message Class for MQTT Subscription Messages
+from pkg_ros_iot_bridge.msg import msgMqttSub           # Message Class for MQTT Subscription Messages
 
 from pyiot import iot                                   # Custom Python Module to perfrom MQTT Tasks
 
@@ -45,7 +45,7 @@ class IotRosBridgeActionServer:
         self._config_mqtt_qos = param_config_iot['mqtt']['qos']
         self._config_mqtt_sub_cb_ros_topic = param_config_iot['mqtt']['sub_cb_ros_topic']
         self._config_sheet_database = param_config_iot['google_apps']['spread_sheet_id']
-        self._config_sheet_name = param_config_iot['google_apps']['spread_sheet_name']
+        self._config_sheet_name = param_config_iot['google_apps']['submission_spread_sheet_id']
 
         print(param_config_iot)
 
