@@ -2,7 +2,7 @@
 string protocol
 string mode
 string topic
-int8[] message
+string[] message
 ---
 # result
 bool flag_success
