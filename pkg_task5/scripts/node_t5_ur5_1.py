@@ -359,7 +359,7 @@ class Ur5Moveit:
 
 
         th3 = cv2.adaptiveThreshold(cv_image, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,\
-            cv2.THRESH_BINARY, 11, 4) #15,6
+            cv2.THRESH_BINARY, 15, 6) #11,4
 
 
 
@@ -557,7 +557,7 @@ def main():
         PACKAGES ON IMS SHEET AND USED TO PROCSS INCOMMING ORDES.'''
 
     ur5 = Ur5Moveit("ur5_1")
-    rospy.sleep(5)
+    rospy.sleep(6)
 
     msg = rospy.wait_for_message("/eyrc/vb/camera_1/image_raw", Image)
     qr_data_list = ur5.image_conversion(msg)
